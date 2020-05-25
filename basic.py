@@ -248,13 +248,68 @@ else:
 # spam()
 
 # 에러처리 try/except
-def div10(num):
-    try:
-        return 10/num
-    except ZeroDivisionError: #무슨 에러인지 모를 경우 에러 명을 안적어도 된다.
-        print('에러: 0으로 나눌 수 없음')
-        # 리턴이 없는 함수는 none을 리턴
-        
-print(div10(2))
-print(div10(0))
-print(div10(5))
+# def div10(num):
+#     try:
+#         return 10/num
+#     except ZeroDivisionError: #무슨 에러인지 모를 경우 에러 명을 안적어도 된다.
+#         print('에러: 0으로 나눌 수 없음')
+#         # 리턴이 없는 함수는 none을 리턴
+
+# print(div10(2))
+# print(div10(0))
+# print(div10(5))
+
+# 예제 1
+# myList=[1,0.2,'가']   
+# print(myList)
+
+# 예제 2
+# myList=[1,0.2,'가',[2,0.3,'나']]
+# print(myList)
+# print(myList[-1])
+
+# 딕셔너리 {키값:값}
+# 키값으로 검색, 순서가 없다(인덱스 없음)
+# myd={1:'a','b':2}
+# print(myd[1])
+# print(myd[2]) #키값에 2가없기 때문에 KeyError 발생
+
+# myCat={'사이즈':'소형','색':'연한갈색','특기':'잠자기'}
+# # print(list(myCat.keys()))
+# # print(list(myCat.values()))
+# # print(list(myCat.items()))
+
+# # for문으로 key, value 값을 전체 출력
+
+# # for k in myCat.values():
+# #     print(k)
+
+# # get() 함수 : 해당 값을 리턴, 없을때 (기본 = None)
+
+# print(myCat.get('color','없음')) # 해당 키 값이 없을때 뒤의 값으로 대체됨
+# print(myCat.get('색','없음'))
+
+# count={}
+# for ch in 'hello':
+#     count.setdefault(ch,0) # 딕셔너리에 키에 ch의 값을 주고 해당 키의값을 모두 0으로 만듦
+#     count[ch]=count[ch]+1 #hello에서 l은 두개이므로 키'l'이 두번 실행되므로 2가 들어간다.
+
+# print(count)
+
+import pprint
+
+msg='''
+“25일 낮 기준 이태원 클럽 관련 확진자 총 237명”
+
+김동우 기자 love@kmib.co.kr
+
+▶ 네이버에서 국민일보를 구독하세요(클릭)
+▶ 국민일보 홈페이지 바로가기
+
+GoodNews paper ⓒ 국민일보(www.kmib.co.kr), 무단전재 및 재배포금지'''
+count={}
+for ch in msg:
+    count.setdefault(ch,0)
+    count[ch]=count[ch]+1
+
+pprint.pprint(count)
