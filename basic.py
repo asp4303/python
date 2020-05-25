@@ -211,17 +211,50 @@ else:
 # print(add10(2))
 
 # 예제1
-def is_odd(num):
-    if num%2==0:
-        print('짝수')
-    else :
-        print('홀수')
+# def is_odd(num):
+#     if num%2==0:
+#         print('짝수')
+#     else :
+#         print('홀수')
 
-is_odd(1)
-is_odd(2)
+# is_odd(1)
+# is_odd(2)
 
 # 예제2
-def foo(*arg):
-    return sum(arg)/len(arg)
+# def foo(*arg):
+#     return sum(arg)/len(arg)
 
-print(foo(10,20,30))
+# print(foo(10,20,30))
+
+
+# 전역 변수
+# x=10
+# def foo():
+#     print(x)
+
+# foo()
+# print(x)
+
+# 지역 변수
+# def spam():
+#     eggs=99
+#     bacon()
+#     print(eggs)
+
+# def bacon():
+#     ham=101
+#     eggs=0
+
+# spam()
+
+# 에러처리 try/except
+def div10(num):
+    try:
+        return 10/num
+    except ZeroDivisionError: #무슨 에러인지 모를 경우 에러 명을 안적어도 된다.
+        print('에러: 0으로 나눌 수 없음')
+        # 리턴이 없는 함수는 none을 리턴
+        
+print(div10(2))
+print(div10(0))
+print(div10(5))
