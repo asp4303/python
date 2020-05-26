@@ -313,3 +313,63 @@ else:
 #     count[ch]=count[ch]+1
 
 # pprint.pprint(count)
+
+
+# 파일 생성하기
+# f=open('fruits.txt',encoding='utf-8')
+# # print(f.read())
+# # print(f.read())     # 커서가 마지막 문자의 끝에 가있으므로 내용이 나오지 않는다.
+# content=f.read()
+# f.close()
+# print(content)
+# print(content)
+
+# 파일을 with로 열기
+# with open('fruits.txt',encoding='utf-8') as f:
+#     content=f.read()
+#     # 들여쓰기가 끝날때 close()해줌
+# print(content)
+
+# 파일 쓰기 ( 없으면 생성 )
+# with open('vegi.txt','w',encoding='utf-8') as f:
+#     f.write('무\n')
+#     f.write('배추\n')
+#     f.write('토마토\n')
+#     f.write('브로콜리\n')
+
+# 덧 붙여 쓰기
+# with open('vegi.txt','a',encoding='utf-8') as f:
+#     f.write('무\n')
+#     f.write('배추\n')
+#     f.write('토마토\n')
+#     f.write('브로콜리\n')
+
+# with open('vegi.txt','a+',encoding='utf-8') as f:
+#     f.write('붙여쓰기\n')
+#     f.seek(0)   # 커서를 첫번째 줄로 이동
+#     content=f.read()
+
+# print(content)
+
+# with open('fruits.txt',encoding='utf-8') as f:
+#     content1=f.read()
+# with open('vegi.txt',encoding='utf-8') as v:
+#     content2=v.read()
+
+# f=open('fruits.txt',encoding='utf-8')
+# v=open('vegi.txt',encoding='utf-8')
+# with open('fruitVegi.txt','a+',encoding='utf-8') as fv:
+#     fv.write(f.read())
+#     fv.write(v.read())
+#     fv.seek(0)
+#     content=fv.read()
+# f.close()
+# v.close()
+# print(content)
+
+# 무한 반복 파일 읽어오기
+import time
+while True:
+    with open('vegi.txt',encoding='utf-8') as f:
+        print(f.read())
+        time.sleep(5)
