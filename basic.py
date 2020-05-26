@@ -296,20 +296,20 @@ else:
 
 # print(count)
 
-import pprint
+# import pprint
 
-msg='''
-“25일 낮 기준 이태원 클럽 관련 확진자 총 237명”
+# msg='''
+# “25일 낮 기준 이태원 클럽 관련 확진자 총 237명”
 
-김동우 기자 love@kmib.co.kr
+# 김동우 기자 love@kmib.co.kr
 
-▶ 네이버에서 국민일보를 구독하세요(클릭)
-▶ 국민일보 홈페이지 바로가기
+# ▶ 네이버에서 국민일보를 구독하세요(클릭)
+# ▶ 국민일보 홈페이지 바로가기
 
-GoodNews paper ⓒ 국민일보(www.kmib.co.kr), 무단전재 및 재배포금지'''
-count={}
-for ch in msg:
-    count.setdefault(ch,0)
-    count[ch]=count[ch]+1
+# GoodNews paper ⓒ 국민일보(www.kmib.co.kr), 무단전재 및 재배포금지'''
+# count={}
+# for ch in msg:
+#     count.setdefault(ch,0)
+#     count[ch]=count[ch]+1
 
-pprint.pprint(count)
+# pprint.pprint(count)
